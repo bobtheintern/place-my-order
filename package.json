@@ -47,7 +47,8 @@
     "jquery": "~2.2.1",
     "place-my-order-api": "^0.4.4",
     "place-my-order-assets": "^0.1.7",
-    "steal": "^0.14.0"
+    "steal": "^0.14.0",
+    "steal-socket.io": "^2.0.0"
   },
   "devDependencies": {
     "can-fixture": "^0.1.2",
