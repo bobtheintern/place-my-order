@@ -15,7 +15,6 @@ var cordovaOptions = {
   index: __dirname + "/production.html",
   glob: [
     "node_modules/steal/steal.production.js"
-    "node_modules/place-my-order-assets/images/**/*"
   ]
 };
 
