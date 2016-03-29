@@ -1,0 +1,21 @@
+{
+  "donejs-cordova": {
+    "name": "place my order",
+    "id": "com.donejs.placemyorder",
+    "platforms": [
+      "android",
+      "wp8",
+      "windows"
+    ]
+  },
+  "donejs-nw": {
+    "main": "production.html",
+    "width": 1000,
+    "height": 600,
+    "platforms": [
+      "win32",
+      "win64"
+    ],
+    "version": "0.12.3"
+  }
+}
