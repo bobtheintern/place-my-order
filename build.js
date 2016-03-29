@@ -26,3 +26,27 @@ if(buildCordova) {
   buildPromise.then(stealCordova.build).then(stealCordova.android.emulate);
 }
 // options added by `donejs add cordova` - END
+// options added by `donejs add nw` - START
+var nwOptions = {
+  buildDir: "./build",
+  version: "0.12.3",
+  platforms: ["win32","win64"],
+  glob: [
+  "package.json",
+  "production.html",
+  "node_modules/steal/steal.production.js",
+  "node_modules/place-my-order-assets/images/**/*"
+  ]
+};
+
+var stealNw = require("steal-nw");
+
+// Check if the cordova option is passed.
+var buildNW = process.argv.indexOf("nw") > 0;
+
+if(buildNW) {
+  buildPromise = buildPromise.then(function(buildResult){
+    stealNw(nwOptions, buildResult);
+  });
+}
+// options added by `donejs add nw` - END
