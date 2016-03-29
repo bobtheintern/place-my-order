@@ -33,7 +33,12 @@
     "configDependencies": [
       "live-reload"
     ],
-    "npmAlgorithm": "flat"
+    "npmAlgorithm": "flat",
+    "envs": {
+      "server-production": {
+        "renderingBaseURL": "https://place-my-order-bti.firebaseapp.com/"
+      }
+    }
   },
   "dependencies": {
     "bit-tabs": "^0.2.0",
@@ -67,5 +72,26 @@
     "width": 1000,
     "height": 600,
     "toolbar": false
+  },
+  "donejs": {
+  "deploy": {
+    "root": "dist",
+    "services": {
+      "production": {
+        "type": "firebase",
+        "config": {
+          "firebase": "place-my-order-bti",
+          "public": "./dist",
+          "headers": [{
+            "source": "/**",
+            "headers": [{
+              "key": "Access-Control-Allow-Origin",
+              "value": "*"
+            }]
+          }]
+        }
+      }
+    }
   }
+}
 }
